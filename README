@@ -1,0 +1,6 @@
+INSTALL
+-------
+
+cp .vimrc ~/.vimrc
+mkdir ~/.vim
+cp -R colors doc ftdetect plugin ruby ~/.vim/
