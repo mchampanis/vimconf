@@ -1,9 +1,12 @@
+runtime! debian.vim
+
 autocmd!   
 
 :colorscheme railscasts
 
 let mapleader = ","
 
+set mouse=a
 set t_Co=256
 set vb
 set nowrap
@@ -38,7 +41,12 @@ set hidden
 set wildmenu
 set wildmode=list:longest
 set scrolloff=3
-set shortmess=atI
+" set title
+" set shortmess=atI
+
+if &filetype == ""
+  setfiletype text
+endif
 
 syntax on
 filetype on
@@ -92,23 +100,21 @@ let perl_fold=1
 " nnoremap ' `
 " nnoremap ` '
 
-if has("autocmd")
-  augroup vimrcEx
-  au!
-
-  autocmd FileType text setlocal textwidth=120
-
-  autocmd BufReadPost *
-    \ if line("'\"") > 0 && line("'\"") <= line("$") |
-    \   exe "normal g`\"" |
-    \ endif
-
-  augroup END
-
-  if &term == "xterm" || &term == "vt220" || &term == "terminal"
-    set title 
+" Variable and method name tab completion
+" Just start typing a variable name and press
+" tab to have it auto-completed for you
+function InsertTabWrapper()
+  let col = col('.') - 1
+  if !col || getline('.')[col - 1] !~ '\k'
+    return "\<tab>"
+  else
+    return "\<c-p>"
   endif
-  
+endfunction
+inoremap <tab> <c-r>=InsertTabWrapper()<cr>
+
+if has("autocmd")
+  autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
   autocmd BufEnter * let &titlestring = $HOSTNAME . ":" . expand("%:p:~")
   
   function! IncSearch()
@@ -120,10 +126,6 @@ if has("autocmd")
   endfunction
 
   autocmd BufReadPost * call IncSearch()
-
-  if &filetype == ""
-    setfiletype text
-  endif
 
   function! PoundComment()
     map - 0i# <ESC>j
