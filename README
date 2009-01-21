@@ -8,6 +8,13 @@ NOTES
 INSTALL
 -------
 
+When pulling project down with git, you will need to run the following two commands to pull the sub-modules down:
+
+$ git submodule init
+$ git submodule update
+
+Then:
+
 $ ./install.sh
 
 If you have an existing .vimrc, it will be backed up to ~/.vim/.vimrc.mine
