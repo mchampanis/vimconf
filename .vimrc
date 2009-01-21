@@ -53,6 +53,7 @@ filetype on
 filetype plugin on
 filetype indent on
 
+nnoremap <Leader>s :%s/\<<C-r><C-w>\>//g<Left><Left>
 nnoremap <Leader>wn :match ExtraWhitespace /\s\+$/<CR>
 nnoremap <Leader>wf :match<CR>
 
@@ -103,7 +104,7 @@ let perl_fold=1
 " Variable and method name tab completion
 " Just start typing a variable name and press
 " tab to have it auto-completed for you
-function InsertTabWrapper()
+function! InsertTabWrapper()
   let col = col('.') - 1
   if !col || getline('.')[col - 1] !~ '\k'
     return "\<tab>"
