@@ -75,7 +75,8 @@ return
 endfunc 
 " end
 
-nmap <Leader>t :NERDTreeToggle<CR>
+nmap <Leader>t :FuzzyFinderTextMate<CR>
+nmap <Leader>n :NERDTreeToggle<CR>
 nmap <C-N> :set invnumber<CR>
 
 map <F3>:set invhls hls?<CR>

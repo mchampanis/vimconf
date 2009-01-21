@@ -1,7 +1,13 @@
+NOTES
+-----
+
+- Vim 7+ recommended.
+- <Leader> is mapped to ,
+
+
 INSTALL
 -------
 
-cp .vimrc ~/.vimrc
-mkdir ~/.vim
-cp -R colors doc ftdetect plugin ruby ~/.vim/
+$ ./install.sh
 
+If you have an existing .vimrc, it will be backed up to ~/.vim/.vimrc.mine

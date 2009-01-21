@@ -1059,7 +1059,7 @@ function! <SID>BuildBufferList(delBufNum, updateBufList)
   let l:NBuffers = bufnr('$')     " Get the number of the last buffer.
   let l:i = 0                     " Set the buffer index to zero.
   
-  " MODIFIED: mchampan
+  " MODIFIED: mchampanis
   let l:real_index = 0
 
   let l:fileNames = ''
@@ -1083,7 +1083,7 @@ function! <SID>BuildBufferList(delBufNum, updateBufList)
           " Only show modifiable buffers (The idea is that we don't 
           " want to show Explorers)
           if (getbufvar(l:i, '&modifiable') == 1 && BufName != '-MiniBufExplorer-')
-            " MODIFIED: mchampan
+            " MODIFIED: mchampanis
             let l:real_index = l:real_index + 1
             
             " Get filename & Remove []'s & ()'s

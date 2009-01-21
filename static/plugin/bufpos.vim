@@ -4,13 +4,15 @@
 " Date:    2007-04-25
 " Version: 1.0
 "
+" Modified: mchampanis <michael.champanis@gmail.com>
 "
 " This script provides a function to activate a vim buffer by passing it the
-" position in the buffers list and maps it to <M-number> to easily switch
+" position in the buffers list and maps it to <Leader>number to easily switch
 " between open buffers.
 "
 " This is best used togheter with the buftabs plugin:
 "   http://www.vim.org/scripts/script.php?script_id=1664
+
 
 function! BufPos_ActivateBuffer(num)
   if bufname("%") != "_NERD_tree_"
