@@ -5,6 +5,14 @@ NOTES
 - <Leader> is mapped to ,
 
 
+SHORTCUTS
+---------
+
+<Leader>t     open fuzzy file finder dialogue (similar to TextMate's cmd-T functionality)
+<Leader>n     open NERDTree file browser
+<Leader>0-9   switch to buffer<n>
+
+
 INSTALL
 -------
 

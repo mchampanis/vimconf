@@ -23,4 +23,9 @@ cp src/fuzzy_file_finder/lib/fuzzy_file_finder.rb ~/.vim/ruby/
 cp src/fuzzyfinder_textmate/fuzzyfinder_textmate.vim ~/.vim/plugin/
 cp src/NERDTree/plugin/NERD_tree.vim ~/.vim/plugin/
 
+# remove old vimfuzzyfinder file
+if [[ -f ~/.vimfuzzy ]]; then
+  rm ~/.vimfuzzyfinder
+fi
+
 echo "Done."
