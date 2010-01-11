@@ -13,9 +13,8 @@
 " This is best used togheter with the buftabs plugin:
 "   http://www.vim.org/scripts/script.php?script_id=1664
 
-
 function! BufPos_ActivateBuffer(num)
-  if bufname("%") != "_NERD_tree_"
+  if bufname("%") != "NERD_tree_1"
     let l:count = 1
     for i in range(1, bufnr("$"))
         if buflisted(i) && getbufvar(i, "&modifiable") 
