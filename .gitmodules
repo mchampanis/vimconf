@@ -1,9 +1,9 @@
 [submodule "src/NERDTree"]
 	path = src/NERDTree
-	url = git://github.com/scrooloose/nerdtree.git
+	url = https://github.com/scrooloose/nerdtree.git
 [submodule "src/fuzzyfinder_textmate"]
 	path = src/fuzzyfinder_textmate
-	url = git://github.com/jamis/fuzzyfinder_textmate.git
+	url = https://github.com/jamis/fuzzyfinder_textmate.git
 [submodule "src/fuzzy_file_finder"]
 	path = src/fuzzy_file_finder
-	url = git://github.com/jamis/fuzzy_file_finder.git
+	url = https://github.com/jamis/fuzzy_file_finder.git
